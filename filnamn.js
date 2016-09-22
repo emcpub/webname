@@ -9,7 +9,7 @@ var felArray =[];
 $(document).ready(function()
 {
 	//$.getJSON("filnamn.json", function(json)
-	$.getJSON("http://emcpub.github.io/webname/filnamn.json", function(json)
+	$.getJSON("https://emcpub.github.io/webname/filnamn.json", function(json)
 	
 	{
 		// Initierar variabler och gömmer helptexten
