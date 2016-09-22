@@ -580,7 +580,9 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 		if (fieldValue == "")
 		{
 			$('#' + targetPart).html("");
-			fixBackground (jsonWord, listPartDot, targetPart);	
+			fixBackground (jsonWord, listPartDot, targetPart);
+            $("." + tempClass).remove();
+			$('#' + jsonWord).removeClass('fieldError');
 		}
 		
 		if (testTyp == "R" && fieldValue != "") 			//Test enligt regex. formel och att valt värden inte är = ""
@@ -597,16 +599,7 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 				{
 					testErrorMessage = translate(jsonWordTranslate, testErrorMessage);
 				}	
-				$("<span class='" + tempClass + "'><font color:'red'><i><br>  " + testErrorMessage + "</br></i></font></span>").insertAfter($('#' + jsonWord));				
-				
-                
-                //BARA en chansning ********************************
-                
-                if (listPartDotSwitch == "Y")
-				{
-				fixBackground (jsonWord, listPartDot, targetPart);
-				}
-                
+				$("<span class='" + tempClass + "'><font color:'red'><i><br>  " + testErrorMessage + "</br></i></font></span>").insertAfter($('#' + jsonWord));				    
                 
 			} else {
 			
