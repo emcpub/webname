@@ -19,7 +19,7 @@ $(document).ready(function()
 		var tempText;
 
 		//Språkvals flaggor
-		tempText = '<img src="http://emcpub.github.io/webname/Sweden.png" id="sverige" alt="Svenska" onclick="flagClick(&quot;sv&quot;);">&nbsp;&nbsp;<img src="http://emcpub.github.io/webname/UnitedKingdom.png" id="england" alt="English"  onclick="flagClick(&quot;en&quot;);">' 
+		tempText = '<img src="https://emcpub.github.io/webname/Sweden.png" id="sverige" alt="Svenska" onclick="flagClick(&quot;sv&quot;);">&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/UnitedKingdom.png" id="england" alt="English"  onclick="flagClick(&quot;en&quot;);">' 
 		$('#flags').html(tempText);
 	
 				
@@ -330,7 +330,7 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 	}
 	else if (listPartDotSwitch == "Y" && helpControl == "Y")		//Krav på ifyllnad * och visar också hjälpsymbolen
 	{
-		temptext = '&nbsp;*&nbsp;&nbsp;<img src="https://googledrive.com/host/0B9p21sv0NGWSS3dielhBejllUFk" id="' + jsonWord + 'HelpPNG' + '"><br>';
+		temptext = '&nbsp;*&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/Help.png" id="' + jsonWord + 'HelpPNG' + '"><br>';
 		$('#'+listPartDot).html(temptext);
 		statusArray[targetPart.slice(3)] = "red";
 		fixBackground (jsonWord, listPartDot, targetPart);
@@ -342,7 +342,7 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 	}
 	else if (listPartDotSwitch == "N" && helpControl == "Y")		//Inte krav på ifyllnad * men visar hjälp symbol
 	{
-		temptext = '&nbsp;&nbsp;<img src="https://googledrive.com/host/0B9p21sv0NGWSS3dielhBejllUFk" id="' + jsonWord + 'HelpPNG' + '"><br>';
+		temptext = '&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/Help.png" id="' + jsonWord + 'HelpPNG' + '"><br>';
 		$('#' + listPartDot).html(temptext);
 		$('#' + listPartLabel).attr("class", "blueText");
 	}
@@ -547,14 +547,14 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 	}
 	else if (listPartDotSwitch == "Y" && helpControl == "Y")
 	{
-		temptext = '&nbsp;*&nbsp;&nbsp;<img src="https://googledrive.com/host/0B9p21sv0NGWSS3dielhBejllUFk" id="' + jsonWord + 'HelpPNG' + '"><br>';
+		temptext = '&nbsp;*&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/Help.png" id="' + jsonWord + 'HelpPNG' + '"><br>';
 		$('#' + listPartDot).html(temptext);
 		statusArray[targetPart.slice(3)] = "red";
 		fixBackground (jsonWord, listPartDot, targetPart);
 	}
 	else if  (listPartDotSwitch == "N" && helpControl == "Y") 
 	{
-		temptext = '&nbsp;&nbsp;<img src="https://googledrive.com/host/0B9p21sv0NGWSS3dielhBejllUFk" id="' + jsonWord + 'HelpPNG' + '"><br>';
+		temptext = '&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/Help.png" id="' + jsonWord + 'HelpPNG' + '"><br>';
 		$('#' + listPartDot).html(temptext);
 		$('#' + listPartLabel).attr("class", "blueText");
 	}
@@ -1118,7 +1118,7 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	var temptext;
 	var listValue = $('#' + helpDependentLink).val();
 	
-	temptext = "<img id='cross' src='https://googledrive.com/host/0B9p21sv0NGWSSWRMaXAwQ0ZZamM'><br>"; 	//close.png
+	temptext = "<img id='cross' src='https://emcpub.github.io/webname/close.png'><br>"; 	//close.png
 
 	if (jsonWord == "kks")
 	{
@@ -1229,7 +1229,7 @@ function checkStatus ()
 		}
 	}
 	
-	temptext = "<img id='cross2' src='https://googledrive.com/host/0B9p21sv0NGWSSWRMaXAwQ0ZZamM'><br>";		//close.png
+	temptext = "<img id='cross2' src='https://emcpub.github.io/webname/close.png'><br>";		//close.png
 	
 	if (okFlag == 0)
 	{
