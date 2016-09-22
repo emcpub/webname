@@ -574,15 +574,13 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 	$('#' + jsonWord).focusout(function () 
 	{
 		var fieldValue = $('#'+ jsonWord).val();			//Angivet värde
-		var val = parseInt(fieldValue);
+		var val = parseInt(fieldValue);                     //Gör om fältvärdet till en interger, 000 -> 0
 		var tempClass = 'fieldErrorText' + listPart;		//klass för att visas om test av innehåll inte går bra
 		
 		if (fieldValue == "")
 		{
 			$('#' + targetPart).html("");
 			fixBackground (jsonWord, listPartDot, targetPart);
-            $("." + tempClass).remove();
-			$('#' + jsonWord).removeClass('fieldError');
 		}
 		
 		if (testTyp == "R" && fieldValue != "") 			//Test enligt regex. formel och att valt värden inte är = ""
@@ -599,7 +597,13 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 				{
 					testErrorMessage = translate(jsonWordTranslate, testErrorMessage);
 				}	
-				$("<span class='" + tempClass + "'><font color:'red'><i><br>  " + testErrorMessage + "</br></i></font></span>").insertAfter($('#' + jsonWord));				    
+				$("<span class='" + tempClass + "'><font color:'red'><i><br>  " + testErrorMessage + "</br></i></font></span>").insertAfter($('#' + jsonWord));	
+                
+                //Glömmer att ändra *
+                if (listPartDotSwitch == "Y")
+				{
+				fixBackground (jsonWord, listPartDot, targetPart);
+				}
                 
 			} else {
 			
@@ -1074,8 +1078,9 @@ function fixBackground (partName, dot, targetPart, kksFlag)
 {
 	var tempPartName = "#" + partName;
 	var tempDotName = "#" + dot;
+    var val = parseInt($(tempPartName).val());
 
-	if($(tempPartName).val() && !(kksFlag))
+	if($(tempPartName).val() && !(kksFlag) && val != 0)
 	{
 		$(tempDotName).css("color", "Green");
 		statusArray[targetPart.slice(3)] = "green";
