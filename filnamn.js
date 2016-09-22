@@ -1080,7 +1080,7 @@ function fixBackground (partName, dot, targetPart, kksFlag, testResult)
 	var tempDotName = "#" + dot;
     var val = parseInt($(tempPartName).val());
 
-	if($(tempPartName).val() && !(kksFlag) && val != 0 && !(testResult))
+	if($(tempPartName).val() && !(kksFlag) && val != 0 && testResult)
 	{
 		$(tempDotName).css("color", "Green");
 		statusArray[targetPart.slice(3)] = "green";
