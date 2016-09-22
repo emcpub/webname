@@ -566,7 +566,7 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 		showHelpList ("", jsonWord);	
 	});
 
-	var temptext = '<input type="text" id="' + jsonWord + '" maxlength="' + fieldSizeMax + '">'
+	var temptext = '<input type="text" id="' + jsonWord + '" maxlength="' + fieldSizeMax + 'style="width: 200px;" />'
 	$('#'+listPart).html(temptext);
 	
 	
