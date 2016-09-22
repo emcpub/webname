@@ -599,6 +599,15 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
 				}	
 				$("<span class='" + tempClass + "'><font color:'red'><i><br>  " + testErrorMessage + "</br></i></font></span>").insertAfter($('#' + jsonWord));				
 				
+                
+                //BARA en chansning ********************************
+                
+                if (listPartDotSwitch == "Y")
+				{
+				fixBackground (jsonWord, listPartDot, targetPart);
+				}
+                
+                
 			} else {
 			
 				$('#' + targetPart).html(fieldValue);
