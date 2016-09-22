@@ -393,9 +393,8 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 		
 		if (listPartDotSwitch == "Y")							//Om det är krav på ifyllnad sätt rätt färg *
 		{
-		fixBackground (jsonWord, listPartDot, targetPart);
+			fixBackground (jsonWord, listPartDot, targetPart);
 		}
-		
 		
 		tempNr = parseInt(targetPart.slice(3));					//Tar reda på numret utifrån targetparten
 		
@@ -1079,6 +1078,11 @@ function fixBackground (partName, dot, targetPart, kksFlag, testResult)
 	var tempPartName = "#" + partName;
 	var tempDotName = "#" + dot;
     var val = parseInt($(tempPartName).val());
+
+	if(testResult === undefined)
+	{
+		testResult = false;
+	}
 
 	if($(tempPartName).val() && !(kksFlag) && val != 0 && testResult)
 	{
