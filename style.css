@@ -38,6 +38,8 @@
 	border:2px solid;
 	padding: 5px 5px 5px 5px;
 	font-size: 12px;
+    height: 400px;
+    overflow-y: scroll;
 }
 
 #flags
