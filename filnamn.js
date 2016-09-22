@@ -9,7 +9,7 @@ var felArray =[];
 $(document).ready(function()
 {
 	//$.getJSON("filnamn.json", function(json)
-	$.getJSON("https://googledrive.com/host/0B9p21sv0NGWSYXIzNWRVOEhTVkE", function(json)
+	$.getJSON("http://emcpub.github.io/webname/filnamn.json", function(json)
 	
 	{
 		// Initierar variabler och gömmer helptexten
@@ -19,7 +19,7 @@ $(document).ready(function()
 		var tempText;
 
 		//Språkvals flaggor
-		tempText = '<img src="https://googledrive.com/host/0B9p21sv0NGWSMFBlR1dWVkpGMHc" id="sverige" alt="Svenska" onclick="flagClick(&quot;sv&quot;);">&nbsp;&nbsp;<img src="https://googledrive.com/host/0B9p21sv0NGWSeGU1aXZmSTExZmM" id="england" alt="English"  onclick="flagClick(&quot;en&quot;);">' 
+		tempText = '<img src="http://emcpub.github.io/webname/Sweden.png" id="sverige" alt="Svenska" onclick="flagClick(&quot;sv&quot;);">&nbsp;&nbsp;<img src="http://emcpub.github.io/webname/UnitedKingdom.png" id="england" alt="English"  onclick="flagClick(&quot;en&quot;);">' 
 		$('#flags').html(tempText);
 	
 				
