@@ -1135,8 +1135,8 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 		temptext = temptext + "</table>";
 	
 		$("#helpShow").html(temptext);
-		$("#helpShow").css("width", 300);
-		$("#cross").css({position: "relative", left: "272px"});
+		$("#helpShow").css("width", 317);
+		$("#cross").css({position: "relative", left: "265px"});
 		$("#helpShow").toggle( "fold" );
 		
 	}
@@ -1155,8 +1155,8 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 		temptext = temptext + "</table>";
 	
 		$("#helpShow").html(temptext);
-		$("#helpShow").css("width", 350);
-		$("#cross").css({position: "relative", left: "322px"});
+		$("#helpShow").css("width", 367);
+		$("#cross").css({position: "relative", left: "315px"});
 		$("#helpShow").toggle( "fold" );
 	}
 	else
@@ -1187,8 +1187,8 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 		temptext = temptext + "</table>";
 	
 		$("#helpShow").html(temptext);
-		$("#helpShow").css("width", 600);
-		$("#cross").css({position: "relative", left: "572px"});
+		$("#helpShow").css("width", 617);
+		$("#cross").css({position: "relative", left: "565px"});
 		$("#helpShow").toggle( "fold" );
 		
 		
