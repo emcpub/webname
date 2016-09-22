@@ -1136,9 +1136,9 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	
 		$("#helpShow").html(temptext);
 		$("#helpShow").css("width", 317);
-		$("#cross").css({position: "relative", left: "265px"});
+        $("#helpShow").css("height", 300);
+		$("#cross").css({position: "relative", left: "267px"});
 		$("#helpShow").toggle( "fold" );
-		
 	}
 	else if (jsonWord == "ssen")
 	{
@@ -1156,7 +1156,8 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	
 		$("#helpShow").html(temptext);
 		$("#helpShow").css("width", 367);
-		$("#cross").css({position: "relative", left: "315px"});
+        $("#helpShow").css("height", 300);
+		$("#cross").css({position: "relative", left: "317px"});
 		$("#helpShow").toggle( "fold" );
 	}
 	else
@@ -1188,7 +1189,7 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	
 		$("#helpShow").html(temptext);
 		$("#helpShow").css("width", 617);
-		$("#cross").css({position: "relative", left: "565px"});
+		$("#cross").css({position: "relative", left: "567px"});
 		$("#helpShow").toggle( "fold" );
 		
 		
