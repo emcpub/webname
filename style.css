@@ -1,0 +1,285 @@
+#dotOrt, #dotBnr, #dotAnsv, #dotBsab1, #dotDCC1, #dotDCC2, #dotBH901, #dotDCC4, #dotBH902, #dotBH903
+{
+	font-size: 22px;
+	color:red;
+}
+
+
+#dotBesk
+{
+	color:red;
+	font-size: 24px;
+}
+
+
+.blueText
+{
+	color:blue;
+	font-style: italic;
+}
+
+
+.fieldError
+{
+	/* background-color :red; */
+	border: 1px solid black;
+	color: red;
+	font-weight: bold;
+}
+
+
+.helpShow
+{
+	position:absolute;
+	left:750px;
+	top:150px;
+	z-index:2;
+	background-color:#FFFFCC;
+	border:2px solid;
+	padding: 5px 5px 5px 5px;
+	font-size: 12px;
+}
+
+#flags
+{
+	text-align: right;
+	padding: 0px 45px 0px 0px;
+}
+
+/*
+#sverige #england
+{
+	width: 10px;
+	height: 10px;
+}
+*/
+
+#nyaNamnet
+{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+#dccSearchShow
+{
+	position:absolute;
+	left:700px;
+	width:250px;
+	top:250px; 
+	z-index:2;
+	background-color:#CCFFFF;
+	border:1px solid;
+	padding: 5px 5px 5px 5px;
+	font-size: 12px;
+}
+
+
+#searchValue
+{
+	background-color:white;
+}
+
+
+#checkName
+{
+	position:absolute;
+	left:750px;
+	top:150px;
+	width: 375px;
+	z-index:2;
+	border:1px solid;
+	padding: 5px 5px 5px 5px;
+	font-size: 14px;
+}
+
+
+.lists
+{
+	width:400px;
+	font-size: 12px;
+}
+
+
+.fixed
+{
+	table-layout:fixed;
+	overflow: hidden;
+}
+
+
+.data
+{
+	padding: 5px 10px 5px 15px;
+	vertical-align:text-top;
+	font-size: 12px;
+}
+
+
+#reset
+{
+		font-size: 12px;
+		margin: 2px;
+		width: 100px;
+		height: 35px;
+}
+
+
+#checkStatus
+{
+		font-size: 12px;
+		margin: 2px;
+		width: 130px;
+		height: 35px;
+}
+	
+	
+#generera
+{
+	width: 110px;
+}
+
+
+#antal
+{
+	width: 	30px;
+}
+
+	
+
+#checkCell
+{
+	text-align: left;
+}
+
+
+#DCCHelpList li
+{
+	padding: 0px 0px 12px 0px;
+}
+
+.col1
+{
+	width:300px; 
+}
+
+.col2
+{
+	width: 450px;
+	background-color: white;
+}
+
+
+.col3
+{
+	width:260px;
+	background-color:white;
+}
+
+
+.col4
+{
+	width:140px;
+	background-color:white;
+}
+
+
+.col5
+{
+	padding: 5px 10px 5px 15px;
+	vertical-align:text-top;
+	background-color: white;
+}
+
+
+.col6
+{
+	padding: 5px 10px 5px 15px;
+	vertical-align:text-top;
+	background-color:white;
+}
+
+
+#tableDCC2 td
+{
+	padding: 5px 5px 12px 5px;
+	text-align: left;
+	vertical-align: text-top;
+}
+
+
+#tableDCC td
+{
+	padding: 5px 5px 14px 5px;
+	text-align: left;
+	vertical-align: text-top;
+}
+
+.helpList
+{
+	cursor:pointer;
+}
+
+#tableDCC
+{
+	cursor:pointer;
+}
+
+#cross
+{
+	cursor:pointer;
+}
+
+#kksfel
+{
+	color: red;
+}
+
+
+.helpList td
+{
+	padding: 5px 5px 12px 5px;
+	text-align: left;
+	vertical-align: text-top;
+	font-size: 12px;
+}
+
+.helpListKKS
+{
+	border-collapse: collapse;
+}
+
+.helpListKKS table, .helpListKKS th, .helpListKKS td
+{
+	padding: 10px;
+	border: 1px solid black;
+	vertical-align: middle;
+}
+
+.helpListKKS td
+{
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	font-size: 12px;
+	width: 30px;
+}
+
+
+.helpListKKS th
+{
+	text-align: left;
+	font-size: 12px;
+}
+
+.helpListKKS #exempel
+{
+	text-align: left;
+	height: 25px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.helpListKKS tr:hover
+{
+	background-color: #f5f5f5;
+}
