@@ -1081,7 +1081,7 @@ function fixBackground (partName, dot, targetPart, kksFlag, testResult)
 
 	if(testResult === undefined)
 	{
-		testResult = false;
+		testResult = true;
 	}
 
 	if($(tempPartName).val() && !(kksFlag) && val != 0 && testResult)
