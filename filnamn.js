@@ -1136,7 +1136,6 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	
 		$("#helpShow").html(temptext);
 		$("#helpShow").css("width", 317);
-        $("#helpShow").css("height", 300);
 		$("#cross").css({position: "relative", left: "267px"});
 		$("#helpShow").toggle( "fold" );
 	}
@@ -1156,7 +1155,6 @@ function showHelpList(partJson, jsonWord, tempkod, kodtext, helpDependentLink, f
 	
 		$("#helpShow").html(temptext);
 		$("#helpShow").css("width", 367);
-        $("#helpShow").css("height", 300);
 		$("#cross").css({position: "relative", left: "317px"});
 		$("#helpShow").toggle( "fold" );
 	}
