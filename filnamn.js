@@ -602,7 +602,7 @@ targetPart, delimitControl, delimitSign, testTyp, fieldSizeMax, fieldSizeMin, te
                 //Glömmer att ändra *
                 if (listPartDotSwitch == "Y")
 				{
-				fixBackground (jsonWord, listPartDot, targetPart);
+				fixBackground (jsonWord, listPartDot, targetPart, false, testResult);
 				}
                 
 			} else {
@@ -1074,13 +1074,13 @@ function checkCodeLogic (level, part1, part2, codelevel)
 
 
 // Ändrar / nollställer färgen på fälten vid inmatning av värden
-function fixBackground (partName, dot, targetPart, kksFlag)
+function fixBackground (partName, dot, targetPart, kksFlag, testResult)
 {
 	var tempPartName = "#" + partName;
 	var tempDotName = "#" + dot;
     var val = parseInt($(tempPartName).val());
 
-	if($(tempPartName).val() && !(kksFlag) && val != 0)
+	if($(tempPartName).val() && !(kksFlag) && val != 0 && !(testResult))
 	{
 		$(tempDotName).css("color", "Green");
 		statusArray[targetPart.slice(3)] = "green";
