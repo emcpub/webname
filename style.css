@@ -283,3 +283,19 @@
 {
 	background-color: #f5f5f5;
 }
+
+input[type=text]::-ms-clear
+{
+ display:none;
+}
+
+input[type=text]
+{
+    width: 200px;
+}
+    
+    
+    
+    
+    
+   
