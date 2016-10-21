@@ -24,7 +24,7 @@ $(document).ready(function()
 	
 				
 		// Hantera valet av kodmodell, BSAB - TEXT - KKS - SSEN
-		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">TEXT&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
+		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">Administrativa dokument&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
 		$("#s0").html(tempText);
 		
 		$("input:radio[name=codeType]").on("click", function() {
@@ -38,24 +38,24 @@ $(document).ready(function()
 
 					$('#' + 'kksfel').remove();
 
-					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "kod", "verksamhet", "del1", "", "", 
+					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "Y", "kod", "verksamhet", "del1", "", "", 
 					"anlaggning", jsonName.anlaggning, "kod", "anlaggning", "verksamhet", "del2", "anlaggning", "dots2","", "", "","Y", "", "", "", "", "block");
 					
-					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "kod", "anlaggning", "del2", "", "", 
+					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2","Y", "kod", "anlaggning", "del2", "", "", 
 					"block", jsonName.block, "kod", "block", "anlaggning", "del3", "block", "dots3", "Y", "verksamhet", "verksamhet", "Y");
 					
-					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "kod", "block", "del3");
+					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "Y", "kod", "block", "del3");
 
-					loadList(jsonName.ansvarigpart, jsonName.oversatt, "ansvarigpart", "Ansvarigpart", "labels4", "dots4", "Y", "s4", "kod", "part", "del5","C","-" ); 	//del4 & del6 också
-					loadList(jsonName.IK1, jsonName.oversatt, "IK1", "Innehållskod", "labels5", "dots5", "N", "s5", "kod", "IK1","","","","IK2",jsonName.IK2,"kod","IK2","omrade","del7","IK2","dots6");
-					loadList(jsonName.IK2, jsonName.oversatt, "IK2", "Innehållskod", "labels6", "dots6", "Y", "s6", "kod", "IK2","del7","A","-", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "IK1", "forklaring", "omrade");		//del8 också
+					loadList(jsonName.ansvarigpart, jsonName.oversatt, "ansvarigpart", "Ansvarigpart", "labels4", "dots4", "Y", "s4", "Y", "kod", "part", "del5","C","-" ); 	//del4 & del6 också
+					loadList(jsonName.IK1, jsonName.oversatt, "IK1", "Innehållskod", "labels5", "dots5", "N", "s5", "Y", "kod", "IK1","","","","IK2",jsonName.IK2,"kod","IK2","omrade","del7","IK2","dots6");
+					loadList(jsonName.IK2, jsonName.oversatt, "IK2", "Innehållskod", "labels6", "dots6", "Y", "s6", "Y", "kod", "IK2","del7","A","-", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "IK1", "forklaring", "omrade");		//del8 också
 					
 					//Radiobutton för val av MODELL - RITNING
 					if (laguageSwitch == 'en')
 					{
-						tempText = '<form action=""><input type="radio" name="codeModelDrawing" value="MODEL">Model&nbsp;&nbsp;&nbsp;<input type="radio" name="codeModelDrawing" value="DRAWING">Drawing</form>';
+						tempText = '<form action=""><input type="radio" name="codeModelDrawing" value="MODEL">Model/Supplementary file&nbsp;&nbsp;&nbsp;<input type="radio" name="codeModelDrawing" value="DRAWING">Drawing/drawing definition files</form>';
 					} else {
-						tempText = '<form action=""><input type="radio" name="codeModelDrawing" value="MODEL">Modell&nbsp;&nbsp;&nbsp;<input type="radio" name="codeModelDrawing" value="DRAWING">Ritning</form>';
+						tempText = '<form action=""><input type="radio" name="codeModelDrawing" value="MODEL">Modell/Komplementfil&nbsp;&nbsp;&nbsp;<input type="radio" name="codeModelDrawing" value="DRAWING">Ritning/Ritningsdefinition</form>';
 					}
 					
 					$("#s7").html(tempText);
@@ -68,7 +68,7 @@ $(document).ready(function()
 						
 						switch (vald) {
 							case "MODEL":
-								loadList(jsonName.typavmodell, jsonName.oversatt, "typavmodell", "Typ av modellfil", "labels8", "dots8", "Y", "s8", "kod", "avser", "del9");
+								loadList(jsonName.typavmodell, jsonName.oversatt, "typavmodell", "Typ av modellfil", "labels8", "dots8", "Y", "s8", "Y", "kod", "avser", "del9");
 								
 								//Radiobuttons frö val av numrering enligt BYGGNAD/PLAN - LÖPNUMMER
 								if (laguageSwitch == 'en')
@@ -87,18 +87,18 @@ $(document).ready(function()
 								
 								switch (vald) {
 									case "BNR":
-										loadList(jsonName.byggnr, jsonName.oversatt, "byggnr", "Byggnadsnummer", "labels10", "dots10", "Y", "s10", "bnr", "text","del10");
-										loadList(jsonName.plan, jsonName.oversatt, "plan", "Plan", "labels11", "dots11", "Y", "s11", "kod", "plan","del11");
-										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels12", "dots12", "N", "s12", "kod", "avser","del13", "B", "-"); //del 12 (innan) också
+										loadList(jsonName.byggnr, jsonName.oversatt, "byggnr", "Byggnadsnummer", "labels10", "dots10", "Y", "s10", "Y", "bnr", "text","del10");
+										loadList(jsonName.plan, jsonName.oversatt, "plan", "Plan", "labels11", "dots11", "Y", "s11", "Y", "kod", "plan","del11");
+										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels12", "dots12", "N", "s12", "Y", "kod", "avser","del13", "B", "-"); //del 12 (innan) också
 										loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels13", "dots13", "N", "s13", "del14","","", "R", "2", "1", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels14", "dots14", "N", "s14", "kod", "avser","del15");
+										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels14", "dots14", "N", "s14", "Y", "kod", "avser","del15");
 									break;
 																		
 									case "LOPNR":
 										loadField("lopnr", jsonName.oversatt, "Löpnummer (4 siffror)", "labels10", "dots10", "Y", "s10", "del10","","", "R", "4","1","^[0-9]{4}$", "4 siffror. Noll utfyllt framför t.ex. 0010. Inte 0000." );
-										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels11", "dots11", "N", "s11", "kod", "avser","del12","B", "-");		//del 11 (innan) också
+										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels11", "dots11", "N", "s11", "Y", "kod", "avser","del12","B", "-");		//del 11 (innan) också
 										loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels12", "dots12", "N", "s12", "del13","","", "R", "2", "1", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels13", "dots13", "N", "s13", "kod", "avser","del14");
+										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels13", "dots13", "N", "s13", "Y", "kod", "avser","del14");
 									break;
 								};
 								});
@@ -111,7 +111,7 @@ $(document).ready(function()
 
 
 							case "DRAWING":
-								loadList(jsonName.typavritning, jsonName.oversatt, "typavritning", "Typ av ritning", "labels8", "dots8", "Y", "s8", "kod", "avser", "del9", "A", "-");		//del 10 också
+								loadList(jsonName.typavritning, jsonName.oversatt, "typavritning", "Typ av ritning", "labels8", "dots8", "Y", "s8", "Y", "kod", "avser", "del9", "A", "-");		//del 10 också
 								
 								//Radiobuttons frö val av numrering enligt BYGGNAD/PLAN - LÖPNUMMER
 								if (laguageSwitch == 'en')
@@ -130,20 +130,20 @@ $(document).ready(function()
 								
 								switch (vald) {
 									case "BNR":
-										loadList(jsonName.byggnr, jsonName.oversatt, "byggnr", "Byggnadsnummer", "labels10", "dots10", "Y", "s10", "bnr", "text","del11");
-										loadList(jsonName.plan, jsonName.oversatt, "plan", "Plan", "labels11", "dots11", "Y", "s11", "kod", "plan","del12");
+										loadList(jsonName.byggnr, jsonName.oversatt, "byggnr", "Byggnadsnummer", "labels10", "dots10", "Y", "s10", "Y", "bnr", "text","del11");
+										loadList(jsonName.plan, jsonName.oversatt, "plan", "Plan", "labels11", "dots11", "Y", "s11", "Y", "kod", "plan","del12");
 										loadField("ritningsdel", jsonName.oversatt, "Ritningsdel (0-2 tecken a-z, A-Z, 0-9)", "labels12", "dots12", "N", "s12", "del13","","", "R", "2", "0", "^[a-zA-Z0-9]{1,2}$", "0-2 bokstäver (a-zA-Z) och/eller siffror.");
-										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels13", "dots13", "N", "s13", "kod", "avser","del15", "B", "-");			//del 14 (innan) också
+										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels13", "dots13", "N", "s13", "Y", "kod", "avser","del15", "B", "-");			//del 14 (innan) också
 										loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels14", "dots14", "N", "s14", "del16","","", "R", "2", "1", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels15", "dots15", "N", "s15", "kod", "avser","del17");
+										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels15", "dots15", "N", "s15", "Y", "kod", "avser","del17");
 									break;
 									
 									case "LOPNR":
 										loadField("lopnr", jsonName.oversatt, "Löpnummer (4 siffror)", "labels10", "dots10", "Y", "s10", "del11","","", "R", "4", "1", "^[0-9]{4}$", "4 siffror. Noll utfyllt framför t.ex. 0010. Inte 0000." );
 										loadField("ritningsdel", jsonName.oversatt, "Ritningsdel (0-2 tecken a-z, A-Z, 0-9)", "labels11", "dots11", "N", "s11", "del12","","", "R", "2", "0", "^[a-zA-Z0-9]{1,2}$", "0-2 bokstäver (a-zA-Z) och/eller siffror (0-9).");
-										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels12", "dots12", "N", "s12", "kod", "avser","del14", "B", "-");		//del 13 (innan) också
+										loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels12", "dots12", "N", "s12", "Y", "kod", "avser","del14", "B", "-");		//del 13 (innan) också
 										loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels13", "dots13", "N", "s13", "del15","","", "R", "2", "1", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels14", "dots14", "N", "s14", "kod", "avser","del16");
+										loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels14", "dots14", "N", "s14", "Y", "kod", "avser","del16");
 									break;
 								};
 								});
@@ -158,69 +158,69 @@ $(document).ready(function()
 
 					$('#' + 'kksfel').remove();
 
-					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "kod", "verksamhet", "del1", "", "", 
+					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "Y", "kod", "verksamhet", "del1", "", "", 
 					"anlaggning", jsonName.anlaggning, "kod", "anlaggning", "verksamhet", "del2", "anlaggning", "dots2","", "", "","Y", "", "", "", "", "block");
 					
-					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "kod", "anlaggning", "del2", "", "", 
+					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "Y", "kod", "anlaggning", "del2", "", "", 
 					"block", jsonName.block, "kod", "block", "anlaggning", "del3", "block", "dots3", "Y", "verksamhet", "verksamhet", "Y");
 					
-					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "kod", "block", "del3");
+					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "Y", "kod", "block", "del3");
 
-					loadList(jsonName.ansvarigpart, jsonName.oversatt, "ansvarigpart", "Ansvarigpart", "labels4", "dots4", "Y", "s4", "kod", "part", "del5","C","-" ); 	//del4 & del6 också
-					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
-					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "kod", "DT2", "del7", "A", "-", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
+					loadList(jsonName.ansvarigpart, jsonName.oversatt, "ansvarigpart", "Ansvarigpart", "labels4", "dots4", "Y", "s4", "Y", "kod", "part", "del5","C","-" ); 	//del4 & del6 också
+					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "N", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
+					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "N", "kod", "DT2", "del7", "A", "-", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
 					loadField("lopnr", jsonName.oversatt, "Löpnummer (3 siffror)", "labels7", "dots7", "Y", "s7", "del9", "", "", "R", "3", "3", "^[0-9]{3}$", "3 siffror. Noll utfyllt framför t.ex. 010. Inte 000." );
-					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "kod", "avser","del11","B", "-");		//del 10 (innan) också
+					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "Y", "kod", "avser","del11","B", "-");		//del 10 (innan) också
 					loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels9", "dots9", "N", "s9", "del12","","", "R", "2", "2", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "kod", "avser","del13");
+					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "Y", "kod", "avser","del13");
 					break;
 
 				case "KKS":
 
 					$('#' + 'kksfel').remove();
 
-					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "kod", "verksamhet", "del1", "", "", 
+					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "Y", "kod", "verksamhet", "del1", "", "", 
 					"anlaggning", jsonName.anlaggning, "kod", "anlaggning", "verksamhet", "del2", "anlaggning", "dots2","", "", "","Y", "", "", "", "", "block");
 					
-					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "kod", "anlaggning", "del2", "", "", 
+					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "Y", "kod", "anlaggning", "del2", "", "", 
 					"block", jsonName.block, "kod", "block", "anlaggning", "del4", "block", "dots3", "Y", "verksamhet", "verksamhet", "Y");
 					
-					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "kod", "block", "del4","B","_");
+					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "Y", "kod", "block", "del4","B","_");
 
 					loadField("kks", jsonName.oversatt, "Beteckning KKS (14 tecken)", "labels4", "dots4", "Y", "s4", "del5","A","_", "K", "14", "14", "", "Felaktig längd. Skall vara 14 tecken.", "Y");
 
-					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
-					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "kod", "DT2", "del7", "A", "_", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
+					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "N", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
+					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "N", "kod", "DT2", "del7", "A", "_", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
 
 					loadField("lopnr", jsonName.oversatt, "Löpnummer (min. 3 siffror)", "labels7", "dots7", "Y", "s7", "del9", "", "", "R", "9", "3", "^[0-9]{3,9}$", "Minimun 3 siffror. Noll utfyllt framför t.ex. 010. Inte 000." );
 
-					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "kod", "avser","del11","B", "-");		//del 10 (innan) också
+					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "Y", "kod", "avser","del11","B", "-");		//del 10 (innan) också
 					loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels9", "dots9", "N", "s9", "del12","","", "R", "2", "2", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "kod", "avser","del13");
+					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "Y", "kod", "avser","del13");
 					break;
 
 				case "SSEN":
 
 					$('#' + 'kksfel').remove();
 
-					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "kod", "verksamhet", "del1", "", "", 
+					loadList(jsonName.verksamhet, jsonName.oversatt, "verksamhet", "Verksamhet", "labels1", "dots1", "Y", "s1", "Y", "kod", "verksamhet", "del1", "", "", 
 					"anlaggning", jsonName.anlaggning, "kod", "anlaggning", "verksamhet", "del2", "anlaggning", "dots2","", "", "","Y", "", "", "", "", "block");
 					
-					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "kod", "anlaggning", "del2", "", "", 
+					loadList(jsonName.anlaggning, jsonName.oversatt, "anlaggning", "Anläggning", "labels2", "dots2", "Y", "s2", "Y", "kod", "anlaggning", "del2", "", "", 
 					"block", jsonName.block, "kod", "block", "anlaggning", "del3", "block", "dots3", "Y", "verksamhet", "verksamhet", "Y");
 					
-					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "kod", "block", "del3","A","_");
+					loadList(jsonName.block, jsonName.oversatt, "block", "Block", "labels3", "dots3", "Y", "s3", "Y", "kod", "block", "del3","A","_");
 
 					loadField("ssen", jsonName.oversatt, "Beteckning SSEN (14 tecken)", "labels4", "dots4", "Y", "s4", "del5","A","_", "S", "14", "14", "", "Felaktig längd. Skall vara 14 tecken.", "Y");
 
-					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
-					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "kod", "DT2", "del7", "A", "_", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
+					loadList(jsonName.DT1, jsonName.oversatt, "DT1", "Dokumentgrupp", "labels5", "dots5", "N", "s5", "N", "kod", "DT1", "", "", "", "DT2", jsonName.DT2, "kod", "DT2", "omrade", "del7", "DT2","dots6", "", "", "", "", "Y", "DT1", "forklaring", "kod");
+					loadList(jsonName.DT2, jsonName.oversatt, "DT2", "Dokumenttyp", "labels6", "dots6", "Y", "s6", "N", "kod", "DT2", "del7", "A", "_", "", "", "", "", "", "", "", "", "", "", "", "", "Y", "DT1", "forklaring", "omrade");	//del8 också
 
 					loadField("lopnr", jsonName.oversatt, "Löpnummer (min. 3 siffror)", "labels7", "dots7", "Y", "s7", "del9", "", "", "R", "9", "3", "^[0-9]{3,9}$", "Minimun 3 siffror. Noll utfyllt framför t.ex. 010. Inte 000." );
 
-					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "kod", "avser","del11","B", "-");		//del 10 (innan) också
+					loadList(jsonName.bilagetyp, jsonName.oversatt, "bilagetyp", "Typ av bilaga", "labels8", "dots8", "N", "s8", "Y", "kod", "avser","del11","B", "-");		//del 10 (innan) också
 					loadField("lopNrBilaga", jsonName.oversatt, "Löpnummer (bilaga, 2 siffror)", "labels9", "dots9", "N", "s9", "del12","","", "R", "2", "2", "^[0-9]{2}$", "2 siffror. Noll utfyllt framför t.ex. 01. Inte 00.");
-					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "kod", "avser","del13");
+					loadList(jsonName.sprak, jsonName.oversatt, "sprak", "Språk", "labels10", "dots10", "N", "s10", "Y", "kod", "avser","del13");
 					break;
 			}
 		});	
@@ -235,7 +235,10 @@ $(document).ready(function()
 	// Kontroll av om filnamnet innehåller alla nödvädiga delar i namnet
 	$("#checkStatus").click( function()
 	{
-		checkStatus();
+		if (checkStatus())
+		{
+		copyButton();
+		}
 	});
 	
 	// Mouseenter för Reset knappen
@@ -283,6 +286,9 @@ function flagClick (land)
 	//listPartLabel, listPartDot: 	id på span element som rubriken och ev. * ska läggas in i
 	//listPartDotSwitch:			= Y -> * och <br>, = N -> <br> och markering som hjälptext
 	//listPart:						id på span element som lista ska läggas in i
+
+	//listCodeSwitch:				Y - Ladda lista med "kod - beskrivning", N - Laddar lista med "Beskrivning"
+
 	//tempkod:						namnet på det fält i Json filen som innehåller aktuell kod
 	//kodtext:						namnet på det fält i Json filen som innehåller beskrivingen för aktuella koder						
 	//targetPart:					id på den span i filnamnet som det valda värdet ska sättas in i
@@ -311,7 +317,7 @@ function flagClick (land)
 	//searchField:					namnet på fältet i Json filen som vi ska jämför det valda värdet från den beroende listan med 
 	//secondDownStreamField:		namnet på de fält som en lista skall nollställa vid tomt val. Verksamhet -> (Anläggning) -> Block 
 
-function loadList (partJson, jsonWordTranslate, jsonWord, rubrik, listPartLabel, listPartDot, listPartDotSwitch, listPart, tempkod, kodtext, targetPart, 
+function loadList (partJson, jsonWordTranslate, jsonWord, rubrik, listPartLabel, listPartDot, listPartDotSwitch, listPart, listCodeSwitch, tempkod, kodtext, targetPart, 
 delimitControl, delimitSign, idLink, partJsonLink, tempkodLink, kodtextLink, searchKodLink, targetPartLink, jsonWordLink, listPartDotLink,
 secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDependentLink, forklaringtext, searchField, secondDownStreamField )
 {
@@ -359,13 +365,25 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 	$.each(partJson, function()
 	{	
 		if (!(this[tempkod] == "" && breakFlag1)) {
-			temptext = temptext + '<option value="' + this[tempkod] + '">' + this[tempkod] + ' - ' + this[kodtext] + '</option>';
+			
+			if (listCodeSwitch == "Y")
+			{
+				temptext = temptext + '<option value="' + this[tempkod] + '">' + this[tempkod] + ' - ' + this[kodtext] + '</option>';
+			}
+			else if (listCodeSwitch == "N")
+			{
+				temptext = temptext + '<option value="' + this[tempkod] + '">' + this[kodtext] + '</option>';
+			}
 		}
 		if (this[tempkod] == "") {breakFlag1 = true;}				//Förhindra att flera "-" poster laddas
 	});
 	temptext += '</select>';
 	$('#'+listPart).html(temptext);
 	
+	if (listCodeSwitch == "N")										//Sorterar om lista i bokstavsordning om koden inte är med i listan
+	{
+		Sortit(jsonWord, listPart);
+	}
 
 
 
@@ -445,8 +463,16 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 			if (listValue == "") {
 				$.each(partJsonLink, function()
 				{ 
-					if (!(this[tempkod] == "" && breakFlag1)) {
-						temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+					if (!(this[tempkod] == "" && breakFlag1)) 
+					{
+						if (listCodeSwitch == "Y")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+						}
+						else if (listCodeSwitch == "N")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[kodtextLink] + '</option>';
+						}
 					}
 					if (this[tempkod] == "") {breakFlag1 = true;}		//Förhindra att flera "-" poster laddas 
 				});
@@ -460,13 +486,27 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 				{
 					if (loadFirstEmptyLine == "Y" && this[tempkodLink] == "" && !(breakFlag1))				//Laddar en första tom rad om man önskar det. Oavsett vilket område det gäller
 					{
-						temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+						if (listCodeSwitch == "Y")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+						}
+						else if (listCodeSwitch == "N")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[kodtextLink] + '</option>';
+						}
 						breakFlag1 = true;
 					}	
 					else
 					{
 						if(this[searchKodLink] == listValue && this[searchKodLink2] == listValue2) { 
-						temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+							if (listCodeSwitch == "Y")
+							{
+								temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+							}
+							else if (listCodeSwitch == "N")
+							{
+								temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[kodtextLink] + '</option>';
+							}
 						}
 					} 
 				});
@@ -478,13 +518,27 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 				{
 					if (loadFirstEmptyLine == "Y" && this[tempkodLink] == "" && !(breakFlag1))
 					{
-						temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+						if (listCodeSwitch == "Y")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+						}
+						else if (listCodeSwitch == "N")
+						{
+							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[kodtextLink] + '</option>';
+						}
 						breakFlag1 = true;
 					}	
 					else
 					{					
 						if(this[searchKodLink] == listValue) { 
-							temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+							if (listCodeSwitch == "Y")
+							{
+								temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[tempkodLink] + ' - ' + this[kodtextLink] + '</option>';
+							}
+							else if (listCodeSwitch == "N")
+							{
+								temptext = temptext + '<option value="' + this[tempkodLink] + '">' + this[kodtextLink] + '</option>';
+							}
 						}
 					} 
 				});
@@ -492,6 +546,12 @@ secondField, searchKodLink2, secondId, loadFirstEmptyLine, helpControl, helpDepe
 			
 			temptext += '</select>';
 			$('#'+idLink).html(temptext);					//Laddar den beroende listan med filtrerade värden
+
+			if (listCodeSwitch == "N")						//Sorterar om lista i bokstavsordning om koden inte är med i listan
+			{
+				Sortit(idLink, idLink);
+			}
+
 			$('#' + targetPartLink).html("");				//Nollställer den länkade targetparten
 			fixBackground (jsonWordLink, listPartDotLink, targetPartLink);
 			
@@ -1077,14 +1137,21 @@ function fixBackground (partName, dot, targetPart, kksFlag, testResult)
 {
 	var tempPartName = "#" + partName;
 	var tempDotName = "#" + dot;
-    var val = parseInt($(tempPartName).val());
+    
+	//if ($(tempPartName).val() == '0A')
+	//{
+	//	var val = NaN;
+	//} else {
+//		var val = parseInt($(tempPartName).val());
+	//}
 
 	if(testResult === undefined)
 	{
 		testResult = true;
 	}
 
-	if($(tempPartName).val() && !(kksFlag) && val != 0 && testResult)
+//	if($(tempPartName).val() && !(kksFlag) && val != 0 && testResult)
+	if($(tempPartName).val() && !(kksFlag) && testResult)
 	{
 		$(tempDotName).css("color", "Green");
 		statusArray[targetPart.slice(3)] = "green";
@@ -1277,6 +1344,15 @@ function checkStatus ()
 		$("#checkName").toggle( "fold" );
 
 	});
+
+	if (okFlag == 0)
+	{
+		return false;
+	} 
+	else if (okFlag == 1)
+	{
+		return true;
+	}
 }
 
 
@@ -1317,7 +1393,7 @@ function fixAA(listPart, targetPart)
 	statusArray[tempNr+2] = "undefined";
 
 
-	loadList(jsonName.anlaggning2, jsonName.oversatt, "anlaggning2", "Detaljruta", tempLabel1, tempDots1, "Y", tempS1, "kod", "anlaggning2", tempDel1);
+	loadList(jsonName.anlaggning2, jsonName.oversatt, "anlaggning2", "Detaljruta", tempLabel1, tempDots1, "Y", tempS1, "Y", "kod", "anlaggning2", tempDel1);
 	loadField("municipalityframe", jsonName.oversatt, "Kommunruta (4 siffror, 1-2256)", tempLabel2, tempDots2, "Y", tempS2, tempDel2,"", "", "R", "4", "4", "^(225[0-6]|22[0-4][0-9]|2[01][0-9][0-9]|1[0-9][0-9][0-9]|0[0-9][0-9][0-9])$", "4 siffror. Noll utfyllt framför t.ex. 0010." );
 }
 
@@ -1337,3 +1413,26 @@ function translate(jsonWordTranslate, rubrik)
 }
 
 
+function Sortit(listname, listPart) { 
+    var $r = $('#' + listname + " option"); 
+    $r.sort(function(a, b) { 
+        return (a.text < b.text) ? -1 : (a.text > b.text) ? 1 : 0;
+    }); 
+    $($r).remove(); 
+	$('#' + listname).append($($r)); 
+
+	$('#' + listname).prop("selectedIndex",0);
+} 
+
+
+function copyButton()
+{
+	var tempText = "";
+
+	for (var x=1; x<18;x++)
+	{
+		tempText += $('#del' + x).html();
+	}
+	
+	window.prompt("Kopiera filnamnet, Ctrl + C, eller höger musknapp.", tempText);
+}
