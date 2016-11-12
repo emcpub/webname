@@ -26,7 +26,7 @@ $(document).ready(function()
 		// Hantera valet av kodmodell, BSAB - TEXT - KKS - SSEN
 		//tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">Administrativa dokument&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
 		
-		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">;
+		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">';
 		if (laguageSwitch == 'en')
 		{
       			tempText = tempText + 'Administrative documents&nbsp;&nbsp;&nbsp;';
