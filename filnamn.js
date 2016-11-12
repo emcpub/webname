@@ -284,6 +284,7 @@ function flagClick (land)
 			location.reload();
 		} else {
 			resetForm(1, 1);
+			location.reload();
 		}
 	}
 };
