@@ -274,7 +274,8 @@ function flagClick (land)
 			location.reload();
 		} else {
 			resetForm(1, 1);
-			$('#lbl').inneHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
+			//$('#lbl').inneHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
+			document.getElementById("lbl").innerHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
 		}
 	}
 };
