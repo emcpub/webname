@@ -11,6 +11,11 @@
 	font-size: 24px;
 }
 
+#blueText
+{
+	color:blue;
+	font-style: italic;
+}
 
 .blueText
 {
