@@ -18,12 +18,12 @@ $(document).ready(function()
 		$("#checkName").hide();
 		var tempText;
 		
-		//Hjälp text vänter fältet
+		//Hjälp text vänter fältet Svenska
     		tempText = '<strong>Hjälp med att generera filnamn</strong><br /><br />Genom att göra val i listorna så sätter du ihop ett filnamn, <em>Genererat filnamn nedan,</em> vilket du sedan kan klippa-och-klistra till din fil på din dator.<br />'
-		tempText += '<br /><span id="dotBesk"> *</span> Krav på ifyllnad.<br /><br /><img alt="" src="https://emcpub.github.io/webname/Help.png" />   Klicka här och se vilka alternativ som är aktuella. Hjäpen stänger du genom att klicka på hjälpformulären.'
+		tempText += '<br /><span id="dotBesk"> *</span> Krav på ifyllnad.<br /><br /><img alt="" src="https://emcpub.github.io/webname/Help.png" />   Klicka här och se vilka alternativ som är aktuella. Hjälpen stänger du genom att klicka på hjälpformulären.'
 		tempText += '<br /><br /><!--<img src="search.png">   Om du klickar här så kan du söka efter olika typer av dokument. T.ex. översiktsschema, beskrivning, placeringsritning.<br><br>-->'
-		tempText += '<span id="blueText">Kursiva fält</span> är en möjlighet att lägga till ytterliggare tecken i filnamnet eller hjälplistor för att underlätta val av värden.<br /><br />Du kan välja språk genom att klicka på någon av flaggorna '
-		tempText += '<img alt="Svenska" src="https://emcpub.github.io/webname/Sweden.png" />&nbsp;<img alt="English" src="https://emcpub.github.io/webname/UnitedKingdom.png" /><br /><br /><strong>OBS !</strong><br />'
+		tempText += '<span id="blueText">Kursiva fält</span> är en möjlighet att lägga till ytterligare tecken i filnamnet eller hjälplistor för att underlätta val av värden.<br /><br />Du kan välja språk genom att klicka på någon av flaggorna '
+		tempText += '<img alt="Svenska" src="https://emcpub.github.io/webname/Sweden.png" />&nbsp;<img alt="English" src="https://emcpub.github.io/webname/UnitedKingdom.png" /><br /><br /><strong>OBS!</strong><br />'
 		tempText +=	'I hjälpformulären kan du klicka direkt i hjälplistan för att välja en kod.'
     		$('#helpTextLeft').html(tempText);
     		tempText = "";
@@ -286,6 +286,15 @@ function flagClick (land)
 			resetForm(1, 1);
 			//$('#lbl').inneHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
 			document.getElementById("lbl").innerHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
+			//Hjälp text vänter fältet Engelska
+      			tempText = '<strong>Help with generating filenames</strong><br /><br />By making the choice in the charts you put together a file name, <em>the Generated file name below,</em> which you can then cut-and-paste to your file on your computer.<br />'
+  			tempText += '<br /><span id="dotBesk"> *</span> Requirements for completion.<br /><br /><img alt="" src="https://emcpub.github.io/webname/Help.png" />   Click here and see what options are present. Close the help by clicking the Help Forms.'
+  			tempText += '<br /><br /><!--<img src="search.png">   If you click here you can search for various types of documents. For example, the master schedule, description, placement drawing.<br><br>-->'
+  			tempText += '<span id="blueText">Italic field</span> is an opportunity to add additional characters in the file name or using lists to facilitate the choice of values.<br /><br />You can select the language by clicking on one of the flags '
+  			tempText += '<img alt="Svenska" src="https://emcpub.github.io/webname/Sweden.png" />&nbsp;<img alt="English" src="https://emcpub.github.io/webname/UnitedKingdom.png" /><br /><br /><strong>Please note!</strong><br />'
+  			tempText +=	'In using these help forms you can click directly in the help list to choose a code.'
+      			$('#helpTextLeft').html(tempText);
+      			tempText = "";
 		}
 	}
 };
