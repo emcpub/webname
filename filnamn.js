@@ -26,17 +26,7 @@ $(document).ready(function()
 		// Hantera valet av kodmodell, BSAB - TEXT - KKS - SSEN
 		//tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">Administrativa dokument&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
 		
-		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT">';
-		if (laguageSwitch == 'en')
-		{
-      			tempText = tempText + 'Administrative documents&nbsp;&nbsp;&nbsp;';
-		}
-		else
-		{
-		 	tempText = tempText + 'Administrativa dokument&nbsp;&nbsp;&nbsp;';
-		}
-		tempText = tempText + '<input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
-		
+		tempText = '<form action=""><input type="radio" name="codeType" id="BSAB" value="BSAB">BSAB&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="TEXT" value="TEXT"><label id="lbl">Administrativa dokument&nbsp;&nbsp;&nbsp;</label><input type="radio" name="codeType" id="KKS" value="KKS">KKS&nbsp;&nbsp;&nbsp;<input type="radio" name="codeType" id="SSEN" value="SSEN">SSEN</form>';
 		$("#s0").html(tempText);
 		
 		$("input:radio[name=codeType]").on("click", function() {
@@ -283,7 +273,8 @@ function flagClick (land)
 		{
 			location.reload();
 		} else {
-			resetForm(0, 1);
+			resetForm(1, 1);
+			$('#lbl').inneHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
 		}
 	}
 };
