@@ -17,6 +17,16 @@ $(document).ready(function()
 		$("#helpShow").hide();
 		$("#checkName").hide();
 		var tempText;
+		
+		//Hjälp text vänter fältet
+    		tempText = '<strong>Hjälp med att generera filnamn</strong><br /><br />Genom att göra val i listorna så sätter du ihop ett filnamn, <em>Genererat filnamn nedan,</em> vilket du sedan kan klippa-och-klistra till din fil på din dator.<br />'
+		tempText += '<br /><span id="dotBesk"> *</span> Krav på ifyllnad.<br /><br /><img alt="" src="https://emcpub.github.io/webname/Help.png" />   Klicka här och se vilka alternativ som är aktuella. Hjäpen stänger du genom att klicka på hjälpformulären.'
+		tempText += '<br /><br /><!--<img src="search.png">   Om du klickar här så kan du söka efter olika typer av dokument. T.ex. översiktsschema, beskrivning, placeringsritning.<br><br>-->'
+		tempText += '<span id="blueText">Kursiva fält</span> är en möjlighet att lägga till ytterliggare tecken i filnamnet eller hjälplistor för att underlätta val av värden.<br /><br />Du kan välja språk genom att klicka på någon av flaggorna '
+		tempText += '<img alt="Svenska" src="https://emcpub.github.io/webname/Sweden.png" />&nbsp;<img alt="English" src="https://emcpub.github.io/webname/UnitedKingdom.png" /><br /><br /><strong>OBS !</strong><br />'
+		tempText +=	'I hjälpformulären kan du klicka direkt i hjälplistan för att välja en kod.'
+    		$('#helpTextLeft').html(tempText);
+    		tempText = "";
 
 		//Språkvals flaggor
 		tempText = '<img src="https://emcpub.github.io/webname/Sweden.png" id="sverige" alt="Svenska" onclick="flagClick(&quot;sv&quot;);">&nbsp;&nbsp;<img src="https://emcpub.github.io/webname/UnitedKingdom.png" id="england" alt="English"  onclick="flagClick(&quot;en&quot;);">' 
