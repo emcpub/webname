@@ -286,8 +286,9 @@ function flagClick (land)
 			resetForm(1, 1);
 			//$('#lbl').inneHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
 			document.getElementById("lbl").innerHTML = "Administrative documents&nbsp;&nbsp;&nbsp;";
+			$('#genereratFilnamn').html("Generated file name:");
 			//Hjälp text vänter fältet Engelska
-      			tempText = '<strong>Help with generating filenames</strong><br /><br />By making the choice in the charts you put together a file name, <em>the Generated file name below,</em> which you can then cut-and-paste to your file on your computer.<br />'
+      			tempText = '<strong>Help with generating filenames</strong><br /><br />By making the choice in the charts you put together a file name, the<em> Generated file name</em> below, which you can then cut-and-paste to your file on your computer.<br />'
   			tempText += '<br /><span id="dotBesk"> *</span> Requirements for completion.<br /><br /><img alt="" src="https://emcpub.github.io/webname/Help.png" />   Click here and see what options are present. Close the help by clicking the Help Forms.'
   			tempText += '<br /><br /><!--<img src="search.png">   If you click here you can search for various types of documents. For example, the master schedule, description, placement drawing.<br><br>-->'
   			tempText += '<span id="blueText">Italic field</span> is an opportunity to add additional characters in the file name or using lists to facilitate the choice of values.<br /><br />You can select the language by clicking on one of the flags '
